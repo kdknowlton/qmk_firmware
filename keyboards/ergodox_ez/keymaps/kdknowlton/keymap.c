@@ -14,7 +14,7 @@ enum layers {
     _MIRROR,
     _FUNCTION,
     _EXTRA,
-}
+};
 
 enum custom_keycodes {
     PLACEHOLDER = SAFE_RANGE, // can always be here
@@ -165,4 +165,5 @@ uint32_t layer_state_set_user(uint32_t state) {
         default:
             break;
     }
+    return state;
 };
