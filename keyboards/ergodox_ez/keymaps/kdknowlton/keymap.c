@@ -9,6 +9,7 @@
 #include "keymap_nordic.h"
 
 #define _____ KC_TRNS
+#define __T__ KC_TRNS  // Marker for layer change keys that should stay transparent
 #define XXXXX KC_NO
 
 #define LAUNCHER LALT(LCTL(LGUI(LSFT(KC_L))))
@@ -50,10 +51,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [_MIRROR] = KEYMAP(
-        ALL_T(KC_BSLASH),   KC_0,       KC_9,   KC_8,       KC_7,   KC_6,   _____,
+        ALL_T(KC_BSLASH),   KC_0,       KC_9,   KC_8,       KC_7,   KC_6,   __T__,
         ALGR_T(KC_EQUAL),   KC_P,       KC_O,   KC_I,       KC_U,   KC_Y,   KC_MINUS,
         RCTL_T(KC_QUOTE),   KC_SCOLON,  KC_L,   KC_K,       KC_J,   KC_H,
-        KC_RSHIFT,          KC_SLASH,   KC_DOT, KC_COMMA,   KC_M,   KC_N,   _____,
+        KC_RSHIFT,          KC_SLASH,   KC_DOT, KC_COMMA,   KC_M,   KC_N,   __T__,
         _____,              _____,      _____,  _____,      GUI_T(KC_RBRACKET),
                                                                 _____,  _____,
                                                                         _____,
@@ -62,7 +63,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         TG(_FUNC),              KC_5,   KC_4,               KC_3,   KC_2,   KC_1,   ALL_T(KC_GRAVE),
         LT(_FUNC,KC_DELETE),    KC_T,   KC_R,               KC_E,   KC_W,   KC_Q,   ALT_T(KC_TAB),
                                 KC_G,   KC_F,               KC_D,   KC_S,   KC_A,   CTL_T(KC_ESCAPE),
-        _____,                  KC_B,   KC_V,               KC_C,   KC_X,   KC_Z,   KC_LSHIFT,
+        __T__,                  KC_B,   KC_V,               KC_C,   KC_X,   KC_Z,   KC_LSHIFT,
                                         GUI_T(KC_LBRACKET), _____,  _____,  _____,  _____,
         _____,  _____,
         _____,
@@ -74,16 +75,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         VRSN,   _____,        LAUNCHER,             KC_UP,          LCTL(LGUI(LSFT(KC_4))), LCTL(KC_UP),    _____,
         _____,  LCTL(KC_LEFT),KC_LEFT,              KC_DOWN,        KC_RIGHT,               LCTL(KC_RIGHT),
         _____,  _____,        KC_AUDIO_VOL_DOWN,    KC_AUDIO_MUTE,  KC_AUDIO_VOL_UP,        LCTL(KC_DOWN),  _____,
-        _____,  _____,        _____,                _____,          _____,
+        _____,  _____,        _____,                __T__,          _____,
                                                                 _____,  _____,
                                                                         _____,
                                                         _____,  _____,  _____,
 
-        _____,  KC_F6,          KC_F7,              KC_F8,          KC_F9,                  KC_F10,         KC_F11,
+        __T__,  KC_F6,          KC_F7,              KC_F8,          KC_F9,                  KC_F10,         KC_F11,
         _____,  LCTL(KC_UP),    LAUNCHER,           KC_UP,          LCTL(LGUI(LSFT(KC_4))), KC_F11,         KC_F12,
                 LCTL(KC_LEFT),  KC_LEFT,            KC_DOWN,        KC_RIGHT,               LCTL(KC_RIGHT), _____,
         _____,  LCTL(KC_DOWN),  KC_AUDIO_VOL_DOWN,  KC_AUDIO_MUTE,  KC_AUDIO_VOL_UP,        KC_F12,         _____,
-                                _____,              _____,          _____,                  _____,          _____,
+                                _____,              __T__,          _____,                  _____,          _____,
         _____,  _____,
         _____,
         _____,  _____,  _____
@@ -105,7 +106,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _____,  _____,  _____,  _____,  _____,  _____,  _____,
                         _____,  _____,  _____,  _____,  _____,
         _____,  _____,
-        _____,
+        __T__,
         _____,  _____,  _____
     ),
 
