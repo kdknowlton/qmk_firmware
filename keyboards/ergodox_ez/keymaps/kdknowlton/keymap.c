@@ -8,11 +8,16 @@
 
 #include "keymap_nordic.h"
 
+#define _____ KC_TRNS
+#define XXXXX KC_NO
+
+#define LAUNCHER LALT(LCTL(LGUI(LSFT(KC_L))))
+
 
 enum layers {
     _QWERTY,
     _MIRROR,
-    _FUNCTION,
+    _FUNC,
     _EXTRA,
 };
 
@@ -25,83 +30,83 @@ enum custom_keycodes {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_QWERTY] = KEYMAP(
-        ALL_T(KC_GRAVE),    KC_1,       KC_2,       KC_3,           KC_4,   KC_5,   TG(_MIRROR),
-        ALT_T(KC_TAB),      KC_Q,       KC_W,       KC_E,           KC_R,   KC_T,   LT(_FUNCTION,KC_DELETE),
-        CTL_T(KC_ESCAPE),   KC_A,       KC_S,       KC_D,           KC_F,   KC_G,
-        KC_LSHIFT,          KC_Z,       KC_X,       KC_C,           KC_V,   KC_B,   KC_LBRACKET,
-        KC_TRNS,            KC_TRNS,    KC_TRNS,    OSL(_FUNCTION), KC_LGUI,
-                                                                KC_PGUP,    KC_PGDOWN,
-                                                                            KC_APPLICATION,
-                                                    KC_ENTER,   KC_BSPACE,  LT(_MIRROR,KC_SPACE),
+        ALL_T(KC_GRAVE),    KC_1,   KC_2,   KC_3,       KC_4,   KC_5,   TG(_MIRROR),
+        ALT_T(KC_TAB),      KC_Q,   KC_W,   KC_E,       KC_R,   KC_T,   LT(_FUNC,KC_DELETE),
+        CTL_T(KC_ESCAPE),   KC_A,   KC_S,   KC_D,       KC_F,   KC_G,
+        KC_LSHIFT,          KC_Z,   KC_X,   KC_C,       KC_V,   KC_B,   OSL(_MIRROR),
+        _____,              _____,  _____,  OSL(_FUNC), GUI_T(KC_LBRACKET),
+                                                    LCTL(KC_LEFT),  LCTL(KC_RIGHT),
+                                                                    KC_APPLICATION,
+                                        KC_ENTER,   KC_BSPACE,      LT(_MIRROR,KC_SPACE),
 
-        TG(_FUNCTION),  KC_6,   KC_7,       KC_8,           KC_9,       KC_0,       ALL_T(KC_BSLASH),
-        KC_MINUS,       KC_Y,   KC_U,       KC_I,           KC_O,       KC_P,       ALGR_T(KC_EQUAL),
-                        KC_H,   KC_J,       KC_K,           KC_L,       KC_SCOLON,  RCTL_T(KC_QUOTE),
-        KC_RBRACKET,    KC_N,   KC_M,       KC_COMMA,       KC_DOT,     KC_SLASH,   KC_RSHIFT,
-                                KC_RGUI,    OSL(_FUNCTION), KC_TRNS,    KC_TRNS,    KC_TRNS,
-                KC_HOME,KC_END,
-                        OSL(_EXTRA),
-        KC_TAB, KC_TRNS,KC_SPACE
+        TG(_FUNC),      KC_6,   KC_7,               KC_8,       KC_9,   KC_0,       ALL_T(KC_BSLASH),
+        KC_MINUS,       KC_Y,   KC_U,               KC_I,       KC_O,   KC_P,       ALGR_T(KC_EQUAL),
+                        KC_H,   KC_J,               KC_K,       KC_L,   KC_SCOLON,  RCTL_T(KC_QUOTE),
+        OSL(_MIRROR),   KC_N,   KC_M,               KC_COMMA,   KC_DOT, KC_SLASH,   KC_RSHIFT,
+                                GUI_T(KC_RBRACKET), OSL(_FUNC), _____,  _____,      _____,
+        LCTL(KC_LEFT),  LCTL(KC_RIGHT),
+        OSL(_EXTRA),
+        KC_TAB,         _____,          KC_SPACE
     ),
 
     [_MIRROR] = KEYMAP(
-        ALL_T(KC_BSLASH),   KC_0,       KC_9,       KC_8,       KC_7,   KC_6,   KC_TRNS,
-        ALGR_T(KC_EQUAL),   KC_P,       KC_O,       KC_I,       KC_U,   KC_Y,   KC_MINUS,
-        RCTL_T(KC_QUOTE),   KC_SCOLON,  KC_L,       KC_K,       KC_J,   KC_H,
-        KC_RSHIFT,          KC_SLASH,   KC_DOT,     KC_COMMA,   KC_M,   KC_N,   KC_RBRACKET,
-        KC_TRNS,            KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_RGUI,
-                                                                KC_TRNS,    KC_TRNS,
-                                                                            KC_TRNS,
-                                                    KC_SPACE,   KC_TRNS,    KC_TRNS,
+        ALL_T(KC_BSLASH),   KC_0,       KC_9,   KC_8,       KC_7,   KC_6,   _____,
+        ALGR_T(KC_EQUAL),   KC_P,       KC_O,   KC_I,       KC_U,   KC_Y,   KC_MINUS,
+        RCTL_T(KC_QUOTE),   KC_SCOLON,  KC_L,   KC_K,       KC_J,   KC_H,
+        KC_RSHIFT,          KC_SLASH,   KC_DOT, KC_COMMA,   KC_M,   KC_N,   _____,
+        _____,              _____,      _____,  _____,      GUI_T(KC_RBRACKET),
+                                                                _____,  _____,
+                                                                        _____,
+                                                    KC_SPACE,   _____,  _____,
 
-        TG(_FUNCTION),              KC_5,       KC_4,       KC_3,       KC_2,       KC_1,       ALL_T(KC_GRAVE),
-        LT(_FUNCTION,KC_DELETE),    KC_T,       KC_R,       KC_E,       KC_W,       KC_Q,       ALT_T(KC_TAB),
-                                    KC_G,       KC_F,       KC_D,       KC_S,       KC_A,       CTL_T(KC_ESCAPE),
-        KC_LBRACKET,                KC_B,       KC_V,       KC_C,       KC_X,       KC_Z,       KC_LSHIFT,
-                                    KC_LGUI,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,
-                    KC_TRNS,    KC_TRNS,
-                                KC_TRNS,
-        KC_TRNS,    KC_BSPACE,  KC_ENTER
+        TG(_FUNC),              KC_5,   KC_4,               KC_3,   KC_2,   KC_1,   ALL_T(KC_GRAVE),
+        LT(_FUNC,KC_DELETE),    KC_T,   KC_R,               KC_E,   KC_W,   KC_Q,   ALT_T(KC_TAB),
+                                KC_G,   KC_F,               KC_D,   KC_S,   KC_A,   CTL_T(KC_ESCAPE),
+        _____,                  KC_B,   KC_V,               KC_C,   KC_X,   KC_Z,   KC_LSHIFT,
+                                        GUI_T(KC_LBRACKET), _____,  _____,  _____,  _____,
+        _____,  _____,
+        _____,
+        _____,  KC_BSPACE,  KC_ENTER
     ),
 
-    [_FUNCTION] = KEYMAP(
-        KC_TRNS,KC_F1,          KC_F2,                          KC_F3,          KC_F4,                  KC_F5,          KC_TRNS,
-        VRSN,   KC_TRNS,        LALT(LCTL(LGUI(LSFT(KC_L)))),   KC_UP,          LCTL(LGUI(LSFT(KC_4))), LCTL(KC_UP),    KC_TRNS,
-        KC_TRNS,LCTL(KC_LEFT),  KC_LEFT,                        KC_DOWN,        KC_RIGHT,               LCTL(KC_RIGHT),
-        KC_TRNS,KC_TRNS,        KC_AUDIO_VOL_DOWN,              KC_AUDIO_MUTE,  KC_AUDIO_VOL_UP,        LCTL(KC_DOWN),  KC_TRNS,
-        KC_TRNS,KC_TRNS,        KC_TRNS,                        KC_TRNS,        KC_TRNS,
-                                                                                        KC_TRNS,    KC_TRNS,
-                                                                                                    KC_TRNS,
-                                                                            KC_TRNS,    KC_TRNS,    KC_TRNS,
+    [_FUNC] = KEYMAP(
+        _____,  KC_F1,        KC_F2,                KC_F3,          KC_F4,                  KC_F5,          _____,
+        VRSN,   _____,        LAUNCHER,             KC_UP,          LCTL(LGUI(LSFT(KC_4))), LCTL(KC_UP),    _____,
+        _____,  LCTL(KC_LEFT),KC_LEFT,              KC_DOWN,        KC_RIGHT,               LCTL(KC_RIGHT),
+        _____,  _____,        KC_AUDIO_VOL_DOWN,    KC_AUDIO_MUTE,  KC_AUDIO_VOL_UP,        LCTL(KC_DOWN),  _____,
+        _____,  _____,        _____,                _____,          _____,
+                                                                _____,  _____,
+                                                                        _____,
+                                                        _____,  _____,  _____,
 
-        KC_TRNS,KC_F6,          KC_F7,                          KC_F8,          KC_F9,                  KC_F10,         KC_F11,
-        KC_TRNS,LCTL(KC_UP),    LALT(LCTL(LGUI(LSFT(KC_L)))),   KC_UP,          LCTL(LGUI(LSFT(KC_4))), KC_F11,         KC_F12,
-                LCTL(KC_LEFT),  KC_LEFT,                        KC_DOWN,        KC_RIGHT,               LCTL(KC_RIGHT), KC_TRNS,
-        KC_TRNS,LCTL(KC_DOWN),  KC_AUDIO_VOL_DOWN,              KC_AUDIO_MUTE,  KC_AUDIO_VOL_UP,        KC_F12,         KC_TRNS,
-                                KC_TRNS,                        KC_TRNS,        KC_TRNS,                KC_TRNS,        KC_TRNS,
-                    KC_TRNS,    KC_TRNS,
-                                KC_TRNS,
-        KC_TRNS,    KC_TRNS,    KC_TRNS
+        _____,  KC_F6,          KC_F7,              KC_F8,          KC_F9,                  KC_F10,         KC_F11,
+        _____,  LCTL(KC_UP),    LAUNCHER,           KC_UP,          LCTL(LGUI(LSFT(KC_4))), KC_F11,         KC_F12,
+                LCTL(KC_LEFT),  KC_LEFT,            KC_DOWN,        KC_RIGHT,               LCTL(KC_RIGHT), _____,
+        _____,  LCTL(KC_DOWN),  KC_AUDIO_VOL_DOWN,  KC_AUDIO_MUTE,  KC_AUDIO_VOL_UP,        KC_F12,         _____,
+                                _____,              _____,          _____,                  _____,          _____,
+        _____,  _____,
+        _____,
+        _____,  _____,  _____
     ),
 
     [_EXTRA] = KEYMAP(
-        RESET,  KC_TRNS,KC_TRNS,        KC_TRNS,    KC_TRNS,        KC_TRNS,KC_TRNS,
-        KC_TRNS,KC_TRNS,KC_MS_BTN1,     KC_MS_UP,   KC_MS_BTN2,     KC_TRNS,KC_TRNS,
-        KC_TRNS,KC_TRNS,KC_MS_LEFT,     KC_MS_DOWN, KC_MS_RIGHT,    KC_TRNS,
-        KC_TRNS,KC_TRNS,KC_MS_WH_LEFT,  KC_MS_BTN3, KC_MS_WH_RIGHT, KC_TRNS,KC_TRNS,
-        KC_TRNS,KC_TRNS,KC_TRNS,        KC_TRNS,    KC_TRNS,
-                                        KC_TRNS,    KC_TRNS,
-                                                    KC_TRNS,
-                            KC_TRNS,    KC_TRNS,    KC_TRNS,
+        RESET,  _____,  _____,          _____,      _____,          _____,  _____,
+        _____,  _____,  KC_MS_BTN1,     KC_MS_UP,   KC_MS_BTN2,     _____,  _____,
+        _____,  _____,  KC_MS_LEFT,     KC_MS_DOWN, KC_MS_RIGHT,    _____,
+        _____,  _____,  KC_MS_WH_LEFT,  KC_MS_BTN3, KC_MS_WH_RIGHT, _____,  _____,
+        _____,  _____,  _____,          _____,      _____,
+                                    _____,  _____,
+                                            _____,
+                            _____,  _____,  _____,
 
-        KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,
-        KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,
-                KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,
-        KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,
-                        KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,KC_TRNS,
-                KC_TRNS,KC_TRNS,
-                        KC_TRNS,
-        KC_TRNS,KC_TRNS,KC_TRNS
+        _____,  _____,  _____,  _____,  _____,  _____,  _____,
+        _____,  _____,  _____,  _____,  _____,  _____,  _____,
+                _____,  _____,  _____,  _____,  _____,  _____,
+        _____,  _____,  _____,  _____,  _____,  _____,  _____,
+                        _____,  _____,  _____,  _____,  _____,
+        _____,  _____,
+        _____,
+        _____,  _____,  _____
     ),
 
 };
