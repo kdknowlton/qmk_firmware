@@ -32,7 +32,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_QWERTY] = KEYMAP(
         ALL_T(KC_GRAVE),    KC_1,   KC_2,   KC_3,       KC_4,   KC_5,   TG(_MIRROR),
-        ALT_T(KC_TAB),      KC_Q,   KC_W,   KC_E,       KC_R,   KC_T,   LT(_FUNC,KC_DELETE),
+        ALT_T(KC_TAB),      KC_Q,   KC_W,   KC_E,       KC_R,   KC_T,   KC_DELETE,
         CTL_T(KC_ESCAPE),   KC_A,   KC_S,   KC_D,       KC_F,   KC_G,
         KC_LSHIFT,          KC_Z,   KC_X,   KC_C,       KC_V,   KC_B,   OSL(_MIRROR),
         _____,              _____,  _____,  OSL(_FUNC), GUI_T(KC_LBRACKET),
@@ -60,11 +60,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                                         _____,
                                                     KC_SPACE,   _____,  _____,
 
-        TG(_FUNC),              KC_5,   KC_4,               KC_3,   KC_2,   KC_1,   ALL_T(KC_GRAVE),
-        LT(_FUNC,KC_DELETE),    KC_T,   KC_R,               KC_E,   KC_W,   KC_Q,   ALT_T(KC_TAB),
-                                KC_G,   KC_F,               KC_D,   KC_S,   KC_A,   CTL_T(KC_ESCAPE),
-        __T__,                  KC_B,   KC_V,               KC_C,   KC_X,   KC_Z,   KC_LSHIFT,
-                                        GUI_T(KC_LBRACKET), _____,  _____,  _____,  _____,
+        TG(_FUNC),  KC_5,   KC_4,               KC_3,   KC_2,   KC_1,   ALL_T(KC_GRAVE),
+        KC_DELETE,  KC_T,   KC_R,               KC_E,   KC_W,   KC_Q,   ALT_T(KC_TAB),
+                    KC_G,   KC_F,               KC_D,   KC_S,   KC_A,   CTL_T(KC_ESCAPE),
+        __T__,      KC_B,   KC_V,               KC_C,   KC_X,   KC_Z,   KC_LSHIFT,
+                            GUI_T(KC_LBRACKET), _____,  _____,  _____,  _____,
         _____,  _____,
         _____,
         _____,  KC_BSPACE,  KC_ENTER
