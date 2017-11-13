@@ -38,7 +38,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _____,              _____,  _____,  OSL(_FUNC), GUI_T(KC_LBRACKET),
                                                     LCTL(KC_LEFT),  LCTL(KC_RIGHT),
                                                                     KC_APPLICATION,
-                                        KC_ENTER,   KC_BSPACE,      LT(_MIRROR,KC_SPACE),
+                            LT(_MIRROR,KC_ENTER),   KC_BSPACE,      _____,
 
         TG(_FUNC),      KC_6,   KC_7,               KC_8,       KC_9,   KC_0,       ALL_T(KC_BSLASH),
         KC_MINUS,       KC_Y,   KC_U,               KC_I,       KC_O,   KC_P,       ALGR_T(KC_EQUAL),
@@ -47,7 +47,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                 GUI_T(KC_RBRACKET), OSL(_FUNC), _____,  _____,      _____,
         LCTL(KC_LEFT),  LCTL(KC_RIGHT),
         OSL(_EXTRA),
-        KC_TAB,         _____,          KC_SPACE
+        _____,          KC_TAB,         LT(_MIRROR,KC_SPACE)
     ),
 
     [_MIRROR] = KEYMAP(
@@ -56,9 +56,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         RCTL_T(KC_QUOTE),   KC_SCOLON,  KC_L,   KC_K,       KC_J,   KC_H,
         KC_RSHIFT,          KC_SLASH,   KC_DOT, KC_COMMA,   KC_M,   KC_N,   __T__,
         _____,              _____,      _____,  _____,      GUI_T(KC_RBRACKET),
-                                                                _____,  _____,
-                                                                        _____,
-                                                    KC_SPACE,   _____,  _____,
+                                                                    _____,  _____,
+                                                                            _____,
+                                            LT(_MIRROR,KC_SPACE),   KC_TAB, _____,
 
         TG(_FUNC),  KC_5,   KC_4,               KC_3,   KC_2,   KC_1,   ALL_T(KC_GRAVE),
         KC_DELETE,  KC_T,   KC_R,               KC_E,   KC_W,   KC_Q,   ALT_T(KC_TAB),
@@ -67,7 +67,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                             GUI_T(KC_LBRACKET), _____,  _____,  _____,  _____,
         _____,  _____,
         _____,
-        _____,  KC_BSPACE,  KC_ENTER
+        _____,  KC_BSPACE,  LT(_MIRROR,KC_ENTER)
     ),
 
     [_FUNC] = KEYMAP(
