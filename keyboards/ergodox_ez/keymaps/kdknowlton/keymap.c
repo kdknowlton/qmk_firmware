@@ -40,7 +40,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                             LT(_MIRROR,KC_ENTER),   KC_BSPACE,      _____,
 
         TG(_FUNC),      KC_6,   KC_7,               KC_8,       KC_9,   KC_0,                   ALL_T(KC_BSLASH),
-        KC_MINUS,       KC_Y,   KC_U,               KC_I,       KC_O,   KC_P,                   KC_EQUAL,
+        XXXXX,          KC_Y,   KC_U,               KC_I,       KC_O,   KC_P,                   KC_EQUAL,
                         KC_H,   LT(_MIRROR,KC_J),   KC_K,       KC_L,   LT(_MIRROR,KC_SCOLON),  RCTL_T(KC_QUOTE),
         OSL(_MIRROR),   KC_N,   KC_M,               KC_COMMA,   KC_DOT, KC_SLASH,               KC_RSHIFT,
                                 GUI_T(KC_RBRACKET), TG(_FUNC),  KC_RALT,_____,                  _____,
@@ -51,7 +51,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_MIRROR] = KEYMAP(
         ALL_T(KC_BSLASH),   KC_0,                   KC_9,   KC_8,       KC_7,               KC_6,   __T__,
-        KC_EQUAL,           KC_P,                   KC_O,   KC_I,       KC_U,               KC_Y,   KC_MINUS,
+        KC_EQUAL,           KC_P,                   KC_O,   KC_I,       KC_U,               KC_Y,   XXXXX,
         RCTL_T(KC_QUOTE),   LT(_MIRROR,KC_SCOLON),  KC_L,   KC_K,       LT(_MIRROR,KC_J),   KC_H,
         KC_RSHIFT,          KC_SLASH,               KC_DOT, KC_COMMA,   KC_M,               KC_N,   __T__,
         _____,              _____,                  KC_RALT,_____,      GUI_T(KC_RBRACKET),
