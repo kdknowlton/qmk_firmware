@@ -30,10 +30,10 @@ enum custom_keycodes {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_QWERTY] = KEYMAP(
-        ALL_T(KC_GRAVE),    KC_1,               KC_2,   KC_3,       KC_4,   KC_5,   TG(_MIRROR),
-        KC_MINUS,           KC_Q,               KC_W,   KC_E,       KC_R,   KC_T,   KC_DELETE,
+        ALL_T(KC_GRAVE),    KC_1,               KC_2,   KC_3,       KC_4,               KC_5,   TG(_MIRROR),
+        KC_MINUS,           KC_Q,               KC_W,   KC_E,       KC_R,               KC_T,   KC_DELETE,
         CTL_T(KC_ESCAPE),   LT(_MIRROR,KC_A),   KC_S,   KC_D,       LT(_MIRROR,KC_F),   KC_G,
-        KC_LSHIFT,          KC_Z,               KC_X,   KC_C,       KC_V,   KC_B,   OSL(_MIRROR),
+        KC_LSHIFT,          KC_Z,               KC_X,   KC_C,       KC_V,               KC_B,   OSL(_MIRROR),
         _____,              _____,              KC_LALT,TG(_FUNC),  GUI_T(KC_LBRACKET),
                                                     LCTL(KC_LEFT),  LCTL(KC_RIGHT),
                                                                     _____,
