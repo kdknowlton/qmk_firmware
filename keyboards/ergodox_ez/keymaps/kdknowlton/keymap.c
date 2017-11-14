@@ -19,7 +19,6 @@ enum layers {
     _QWERTY,
     _MIRROR,
     _FUNC,
-    _EXTRA,
 };
 
 enum custom_keycodes {
@@ -46,7 +45,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         OSL(_MIRROR),   KC_N,   KC_M,               KC_COMMA,   KC_DOT, KC_SLASH,               KC_RSHIFT,
                                 GUI_T(KC_RBRACKET), TG(_FUNC),  KC_RALT,_____,                  _____,
         LCTL(KC_LEFT),  LCTL(KC_RIGHT),
-        OSL(_EXTRA),
+        _____,
         _____,          KC_TAB,         LT(_MIRROR,KC_SPACE)
     ),
 
@@ -76,7 +75,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _____,  KC_MS_WH_RIGHT, KC_LEFT,            KC_DOWN,        KC_RIGHT,               KC_MS_WH_LEFT,
         _____,  _____,          KC_AUDIO_VOL_DOWN,  KC_AUDIO_MUTE,  KC_AUDIO_VOL_UP,        LCTL(KC_DOWN),  _____,
         _____,  _____,          _____,              __T__,          _____,
-                                                                _____,  _____,
+                                                                _____,  RESET,
                                                                         _____,
                                                         _____,  _____,  _____,
 
@@ -87,26 +86,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                 _____,              __T__,          _____,                  _____,          _____,
         _____,  _____,
         _____,
-        _____,  _____,  _____
-    ),
-
-    [_EXTRA] = KEYMAP(
-        RESET,  _____,  _____,          _____,      _____,          _____,  _____,
-        _____,  _____,  KC_MS_BTN1,     KC_MS_UP,   KC_MS_BTN2,     _____,  _____,
-        _____,  _____,  KC_MS_LEFT,     KC_MS_DOWN, KC_MS_RIGHT,    _____,
-        _____,  _____,  KC_MS_WH_LEFT,  KC_MS_BTN3, KC_MS_WH_RIGHT, _____,  _____,
-        _____,  _____,  _____,          _____,      _____,
-                                    _____,  _____,
-                                            _____,
-                            _____,  _____,  _____,
-
-        _____,  _____,  _____,  _____,  _____,  _____,  _____,
-        _____,  _____,  _____,  _____,  _____,  _____,  _____,
-                _____,  _____,  _____,  _____,  _____,  _____,
-        _____,  _____,  _____,  _____,  _____,  _____,  _____,
-                        _____,  _____,  _____,  _____,  _____,
-        _____,  _____,
-        __T__,
         _____,  _____,  _____
     ),
 
