@@ -1,2 +1,4 @@
 #undef DEBOUNCE
-#define DEBOUNCE 5
+#define DEBOUNCE 7
+
+#define PERMISSIVE_HOLD
