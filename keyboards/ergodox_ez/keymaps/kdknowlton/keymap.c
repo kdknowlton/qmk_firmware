@@ -72,7 +72,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_FUNC] = KEYMAP(
         _____,  KC_F1,          KC_F2,      KC_F3,  KC_F4,      KC_F5,          _____,
         VRSN,   _____,          HYPR(KC_L), KC_UP,  SSHOT,      LCTL(KC_UP),    _____,
-        _____,  KC_MS_WH_RIGHT, KC_LEFT,    KC_DOWN,KC_RIGHT,   KC_MS_WH_LEFT,
+        KC_LOCK,KC_MS_WH_RIGHT, KC_LEFT,    KC_DOWN,KC_RIGHT,   KC_MS_WH_LEFT,
         _____,  _____,          KC_VOLD,    KC_MUTE,KC_VOLU,    LCTL(KC_DOWN),  _____,
         _____,  _____,          _____,              __T__,      _____,
                                                                 _____,  RESET,
@@ -81,7 +81,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
         __T__,  KC_F6,          KC_F7,      KC_F8,  KC_F9,      KC_F10,         KC_F11,
         _____,  LCTL(KC_UP),    HYPR(KC_L), KC_UP,  SSHOT,      KC_F11,         KC_F12,
-                KC_MS_WH_RIGHT, KC_LEFT,    KC_DOWN,KC_RIGHT,   KC_MS_WH_LEFT,  _____,
+                KC_MS_WH_RIGHT, KC_LEFT,    KC_DOWN,KC_RIGHT,   KC_MS_WH_LEFT,  KC_LOCK,
         _____,  LCTL(KC_DOWN),  KC_VOLD,    KC_MUTE,KC_VOLU,    KC_F12,         _____,
                                 _____,      __T__,  _____,      _____,          _____,
         _____,  _____,
