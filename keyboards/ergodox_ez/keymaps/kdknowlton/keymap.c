@@ -36,7 +36,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_LSHIFT,          KC_Z,               KC_X,   KC_C,       KC_V,               KC_B,   OSL(_MIRROR),
         KC_WH_R,            KC_WH_L,            KC_LALT,MO(_FUNC),  GUI_T(KC_LBRACKET),
                                                     LCTL(KC_LEFT),  LCTL(KC_RIGHT),
-                                                                    _____,
+                                                                    LCTL(KC_UP),
                             LT(_MIRROR,KC_ENTER),   KC_BSPACE,      _____,
 
         TG(_FUNC),      KC_6,   KC_7,               KC_8,       KC_9,   KC_0,                   ALL_T(KC_BSLASH),
@@ -45,7 +45,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         OSL(_MIRROR),   KC_N,   KC_M,               KC_COMMA,   KC_DOT, KC_SLASH,               KC_RSHIFT,
                                 GUI_T(KC_RBRACKET), MO(_FUNC),  KC_RALT,_____,                  _____,
         LCTL(KC_LEFT),  LCTL(KC_RIGHT),
-        _____,
+        LCTL(KC_UP),
         _____,          KC_TAB,         LT(_MIRROR,KC_SPACE)
     ),
 
