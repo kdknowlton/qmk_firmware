@@ -34,7 +34,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_MINUS,           KC_Q,               KC_W,   KC_E,       KC_R,               KC_T,   KC_DELETE,
         CTL_T(KC_ESCAPE),   LT(_MIRROR,KC_A),   KC_S,   KC_D,       LT(_MIRROR,KC_F),   KC_G,
         KC_LSHIFT,          KC_Z,               KC_X,   KC_C,       KC_V,               KC_B,   OSL(_MIRROR),
-        _____,              _____,              KC_LALT,MO(_FUNC),  GUI_T(KC_LBRACKET),
+        KC_WH_R,            KC_WH_L,            KC_LALT,MO(_FUNC),  GUI_T(KC_LBRACKET),
                                                     LCTL(KC_LEFT),  LCTL(KC_RIGHT),
                                                                     _____,
                             LT(_MIRROR,KC_ENTER),   KC_BSPACE,      _____,
@@ -63,7 +63,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_DELETE,  KC_T,   KC_R,               KC_E,   KC_W,   KC_Q,               KC_MINUS,
                     KC_G,   LT(_MIRROR,KC_F),   KC_D,   KC_S,   LT(_MIRROR,KC_A),   CTL_T(KC_ESCAPE),
         __T__,      KC_B,   KC_V,               KC_C,   KC_X,   KC_Z,               KC_LSHIFT,
-                            GUI_T(KC_LBRACKET), _____,  KC_LALT,_____,              _____,
+                            GUI_T(KC_LBRACKET), _____,  KC_LALT,KC_WH_R,            KC_WH_L,
         _____,  _____,
         _____,
         _____,  KC_BSPACE,  LT(_MIRROR,KC_ENTER)
