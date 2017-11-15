@@ -34,7 +34,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_MINUS,           KC_Q,               KC_W,   KC_E,       KC_R,               KC_T,   KC_DELETE,
         CTL_T(KC_ESCAPE),   LT(_MIRROR,KC_A),   KC_S,   KC_D,       LT(_MIRROR,KC_F),   KC_G,
         KC_LSHIFT,          KC_Z,               KC_X,   KC_C,       KC_V,               KC_B,   OSL(_MIRROR),
-        _____,              _____,              KC_LALT,TG(_FUNC),  GUI_T(KC_LBRACKET),
+        _____,              _____,              KC_LALT,MO(_FUNC),  GUI_T(KC_LBRACKET),
                                                     LCTL(KC_LEFT),  LCTL(KC_RIGHT),
                                                                     _____,
                             LT(_MIRROR,KC_ENTER),   KC_BSPACE,      _____,
@@ -43,7 +43,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         XXXXX,          KC_Y,   KC_U,               KC_I,       KC_O,   KC_P,                   KC_EQUAL,
                         KC_H,   LT(_MIRROR,KC_J),   KC_K,       KC_L,   LT(_MIRROR,KC_SCOLON),  RCTL_T(KC_QUOTE),
         OSL(_MIRROR),   KC_N,   KC_M,               KC_COMMA,   KC_DOT, KC_SLASH,               KC_RSHIFT,
-                                GUI_T(KC_RBRACKET), TG(_FUNC),  KC_RALT,_____,                  _____,
+                                GUI_T(KC_RBRACKET), MO(_FUNC),  KC_RALT,_____,                  _____,
         LCTL(KC_LEFT),  LCTL(KC_RIGHT),
         _____,
         _____,          KC_TAB,         LT(_MIRROR,KC_SPACE)
