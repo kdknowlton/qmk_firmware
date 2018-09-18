@@ -253,7 +253,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       break;
     #ifdef AUDIO_ENABLE
       case ZELDA:
-        PLAY_SONG(zelda_puzzle);
+        if (record->event.pressed) {
+          PLAY_SONG(zelda_puzzle);
+        }
         return false;
         break;
     #endif
