@@ -37,6 +37,7 @@
 /* override number of MIDI tone keycodes (each octave adds 12 keycodes and allocates 12 bytes) */
 //#define MIDI_TONE_KEYCODE_OCTAVES 2
 
+#undef MATRIX_COL_PINS
 #define MATRIX_COL_PINS { F1, F0, B0, C7, D1, F5, F6, F7, D4, D6, B4, D7 }
 
 // Most tactile encoders have detents every 4 stages
