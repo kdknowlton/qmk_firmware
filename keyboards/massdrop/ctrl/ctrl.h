@@ -5,7 +5,7 @@
 #include "matrix.h"
 
 #include "i2c_master.h"
-#include "led_matrix.h" //For led keycodes
+#include "md_rgb_matrix.h" //For led keycodes
 #include "usb/udi_cdc.h"
 #include "usb/usb2422.h"
 
@@ -30,3 +30,13 @@
     {   K59, K60, K61, K62, K63, K76, K50, K33   }, \
     {   K72, K73, K74, K75, K85, K86, K87,       }, \
 }
+
+#define TOGGLE_FLAG_AND_PRINT(var, name) { \
+        if (var) { \
+            dprintf(name " disabled\r\n"); \
+            var = !var; \
+        } else { \
+            var = !var; \
+            dprintf(name " enabled\r\n"); \
+        } \
+    }
